@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart Generating Library</title>
+</head>
+<body>
+    <!-- <canvas id="tryArc" width="400" height="400"></canvas> -->
+    <div id="myChart"></div>
+     
+    <script type="module">
+        import {PieChart} from "./chart.js";
+
+        const chart = new PieChart("myChart",
+            [
+                {label: "A", value: 10, color: "red"},
+                {label: "B", value: 20, color: "blue"},
+                {label: "C", value: 30, color: "green"},
+                {label: "D", value: 50, color: "orange"},
+            ],400,400);
+
+        window.chart = chart;
+    </script>
+
+
+
+    <script>
+        /*
+        const canvas = document.getElementById('tryArc');
+        const ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.lineTo(200,200);
+        ctx.arc(200,200,200,-Math.PI/2, Math.PI*2*50/100  );
+        ctx.lineTo(200,200);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        */
+    </script>
+</body>
+</html>
